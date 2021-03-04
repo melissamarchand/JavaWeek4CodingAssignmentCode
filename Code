@@ -1,0 +1,53 @@
+package week4CodingAssignmentB;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
+public class Week4CodingAssignmentB {
+
+	public static void main(String[] args) {
+
+		List<String> employeeNames = new ArrayList<String>();
+		employeeNames.add("George");
+		employeeNames.add("Julie");
+		employeeNames.add("Sam");
+		employeeNames.add("Joseph");
+		employeeNames.add("Joseph");
+
+		System.out.println("The number of employees are: " + employeeNames.size());
+		System.out.println("The employee names are: " + employeeNames);
+
+		Set<Integer> ids = new HashSet<Integer>();
+		ids.add(1);
+		ids.add(2);
+		ids.add(3);
+		ids.add(4);
+		ids.add(5);
+
+		System.out.println("The number of ID numbers are: " + ids.size() + " ");
+		System.out.println("The employee ID numbers are: " + ids);
+		System.out.println();
+
+		Map<Integer, String> employeeMap = new HashMap<Integer, String>();
+
+		int i = 0;
+
+		for (Integer id : ids) {
+			employeeMap.put(id, employeeNames.get(i));
+			i++;
+		}
+		System.out.println("The employee names and their corresponding ID numbers are printed below:");
+		System.out.println();
+
+		for (Map.Entry<Integer, String> entry : employeeMap.entrySet())
+			// System.out.println("Key = " + entry.getKey() + " , value = " .chars());
+
+			System.out.println(employeeMap);
+		// System.out.println("The set is: " + employeeMap.keySet());
+
+	}
+}
